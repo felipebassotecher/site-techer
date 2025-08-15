@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "tailwindcss": "npx @tailwindcss/cli -i ./styles/tailwindcss-input.css -o ./styles/tailwindcss-result.css --watch"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/felipebassotecher/site-techer/issues"
   },
-  "homepage": "https://github.com/felipebassotecher/site-techer#readme"
+  "homepage": "https://github.com/felipebassotecher/site-techer#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.12",
+    "tailwindcss": "^4.1.12"
+  }
 }
