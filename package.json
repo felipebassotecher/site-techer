@@ -1,0 +1,20 @@
+{
+  "name": "site-techer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felipebassotecher/site-techer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/felipebassotecher/site-techer/issues"
+  },
+  "homepage": "https://github.com/felipebassotecher/site-techer#readme"
+}
