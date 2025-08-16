@@ -7,12 +7,12 @@
     <link href="./styles/tailwindcss-result.css" rel="stylesheet">
 </head>
 <body class="bg-background-dark relative">
-    <nav class="bg-background-dark block w-full sticky top-0 py-4">
-        <div class="max-w-4xl mx-auto w-full flex items-center gap-4">
+    <nav class="bg-background-dark block w-full sticky top-0">
+        <div class="max-w-7xl mx-auto w-full flex items-center gap-4 p-6">
             <aside class="w-40">
                 <img src="assets/images/techer-logo.png" alt="Logo Techer">
             </aside>
-            <ul class="ml-auto flex items-center gap-4">
+            <ul class="ml-auto hidden sm:flex items-center gap-4">
                 <li>
                     <a href="#" class="text-white font-semibold">Início</a>
                 </li>
@@ -25,25 +25,25 @@
             </ul>
         </div>
     </nav>
-    <main class="bg-background-dark block w-full h-[85vh]">
-        <div class="max-w-4xl mx-auto w-full h-full">
-            <div class="w-full h-full flex gap-2">
-                <article class="w-1/2 h-full flex flex-col justify-center">
-                    <h1 class="text-6xl text-white">
+    <main class="bg-background-dark block w-full h-[calc(100vh-90px)] sm:h-[85vh]">
+        <div class="max-w-7xl mx-auto w-full h-full p-6">
+            <div class="w-full h-full flex flex-col-reverse sm:flex-row gap-2">
+                <article class="w-full sm:w-2/3 lg:w-1/2 h-full flex flex-col justify-center">
+                    <h1 class="text-6xl text-white text-center sm:text-left">
                         Techer
                     </h1>
-                    <h2 class="text-2xl text-white mt-2">
+                    <h2 class="text-2xl text-white mt-2 text-center sm:text-left">
                         Software House
                     </h2>
-                    <footer class="flex items-center gap-4 mt-20">
+                    <footer class="flex items-center justify-center sm:justify-start gap-4 mt-20">
                         <a href="#" class="bg-color1 text-white px-4 py-2 rounded-full hover:bg-color1-dark">
                             Conheça a Techer
                         </a>
                     </footer>
                 </article>
-                <aside class="w-1/2 h-full flex items-center justify-center">
+                <aside class="w-full sm:1/3 lg:w-1/2 h-full flex items-center justify-center">
                     <img
-                        class="w-1/2"
+                        class="w-full max-w-60 sm:max-w-120"
                         src="assets/images/example-image.png"
                         alt="Exemplo de Imagem">
                 </aside>
@@ -51,7 +51,7 @@
         </div>
     </main>
     <section class="bg-white block w-full py-24">
-        <div class="max-w-4xl mx-auto w-full">
+        <div class="max-w-7xl mx-auto w-full p-6">
             <header>
                 <h2 class="text-center">
                     Soluções inteligentes e resultados reais
@@ -60,7 +60,7 @@
                     Impulsionando o seu negócio com tecnologia de ponta
                 </h3>
             </header>
-            <div class="grid grid-cols-3 gap-4 mt-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-20 md:gap-10 mt-8">
                 <!-- Inovacao -->
                 <article>
                     <header>
@@ -71,11 +71,11 @@
                             Inovação
                         </h4>
                     </header>
-                    <p class="text-center mt-2">
+                    <p class="text-center mt-4">
                         Sempre enriquecendo o mercado com soluções
                         inovadoras e que trazem resultados reais.
                     </p>
-                    <footer class="flex justify-center mt-4">
+                    <footer class="flex justify-center mt-8">
                         <a href="#" class="bg-color1 text-white px-4 py-2 rounded-full hover:bg-color1-dark">
                             Nosso Lançamento
                         </a>
@@ -92,11 +92,11 @@
                             Inteligência
                         </h4>
                     </header>
-                    <p class="text-center mt-2">
+                    <p class="text-center mt-4">
                         Através de ideias inovadoras, adicionamos mais
                         inteligência ao dia-a-dia da sua empresa.
                     </p>
-                    <footer class="flex justify-center mt-4">
+                    <footer class="flex justify-center mt-8">
                         <a href="#" class="bg-color1 text-white px-4 py-2 rounded-full hover:bg-color1-dark">
                             Nossos serviços
                         </a>
@@ -113,11 +113,11 @@
                             Soluções
                         </h4>
                     </header>
-                    <p class="text-center mt-2">
+                    <p class="text-center mt-4">
                         Especialistas no desenvolvimento de software
                         personalizado para atender necessidades específicas.
                     </p>
-                    <footer class="flex justify-center mt-4">
+                    <footer class="flex justify-center mt-8">
                         <a href="#" class="bg-color1 text-white px-4 py-2 rounded-full hover:bg-color1-dark">
                             Nossa experiência
                         </a>
