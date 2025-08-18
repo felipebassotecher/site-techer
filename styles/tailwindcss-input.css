@@ -2,8 +2,10 @@
 
 @theme {
   --color-color1: #1091EF;
+  --color-on-color1: #FFFFFF;
   --color-color1-dark: #0363AA;
   --color-color2: #FF7F22;
+  --color-on-color2: #FFFFFF;
   --color-color2-dark: #D8630E;
   --color-color-content-base: #222222;
   --color-color-content-body: #545559;
