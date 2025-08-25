@@ -10,24 +10,80 @@
 </head>
 <body class="bg-background-dark relative">
     <nav class="bg-background-dark block w-full sticky top-0 z-(--index-navigation)">
-        <div class="max-w-7xl mx-auto w-full flex items-center gap-4 p-6">
+        <div class="max-w-7xl mx-auto w-full flex items-center justify-between sm:justify-start gap-4 p-2 px-4 sm:p-6">
+            <button data-toggle="mobile-menu" class="flex sm:hidden w-6 h-6">
+                <span class="material-icons text-white">menu</span>
+            </button>
             <aside class="w-40">
                 <img src="assets/images/techer-logo.png" alt="Logo Techer">
             </aside>
-            <ul class="ml-auto hidden sm:flex items-center gap-4">
-                <li>
-                    <a href="#" class="text-white font-semibold">Início</a>
-                </li>
-                <li>
-                    <a href="#" class="text-white font-semibold">NSight</a>
-                </li>
-                <li>
-                    <a href="#" class="text-white font-semibold">Fale Conosco</a>
-                </li>
-            </ul>
+            <!-- Spacer -->
+            <aside class="flex sm:hidden w-6 h-6">
+                &nbsp;
+            </aside>
+            <div
+                id="mobile-menu"
+                style="display: block;"
+                class="animate-zoom sm:animate-none fixed sm:static bg-background-dark sm:bg-transparent inset-0 sm:inset-auto ml-0 sm:ml-auto w-screen h-screen sm:w-auto sm:h-auto"
+                data-custom-animation="animate-zoom">
+                <div class="flex flex-col">
+                    <header class="block sm:hidden p-4">
+                        <div class="flex items-center justify-between gap-4">
+                            <button data-toggle="mobile-menu" class="w-6 h-6">
+                                <span class="material-icons text-white">close</span>
+                            </button>
+                            <a class="block w-40" data-toggle="mobile-menu" href="#home">
+                                <img src="assets/images/techer-logo.png" alt="Logo Techer">
+                            </a>
+                            <!-- Spacer -->
+                            <aside class="w-6 h-6">
+                                &nbsp;
+                            </aside>
+                        </div>
+                    </header>
+                    <ul class="flex flex-col sm:flex-row items-start sm:items-center gap-0 sm:gap-4 w-full sm:w-fit">
+                        <li class="w-full sm:w-fit border-t border-b border-gray-400 sm:border-none p-4 sm:p-0">
+                            <a href="#" class="flex items-center justify-start w-full sm:block text-white font-semibold">
+                                <span class="inline-block text-current">
+                                    Início
+                                </span>
+                                <span class="flex sm:hidden ml-auto">
+                                    <span class="material-icons text-current">
+                                        chevron_right
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="w-full sm:w-fit border-b border-gray-400 sm:border-none p-4 sm:p-0">
+                            <a href="#" class="flex items-center justify-start w-full sm:block text-white font-semibold">
+                                <span class="inline-block text-current">
+                                    NSight
+                                </span>
+                                <span class="flex sm:hidden ml-auto">
+                                    <span class="material-icons text-current">
+                                        chevron_right
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="w-full sm:w-fit border-b border-gray-400 sm:border-none p-4 sm:p-0">
+                            <a href="#" class="flex items-center justify-start w-full sm:block text-white font-semibold">
+                                <span class="inline-block text-current">
+                                    Fale Conosco
+                                </span>
+                                <span class="flex sm:hidden ml-auto">
+                                    <span class="material-icons text-current">
+                                        chevron_right
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </nav>
-    <main class="bg-background-dark block w-full h-[calc(100vh-90px)] sm:h-[85vh]">
+    <main id="home" class="bg-background-dark block w-full h-[calc(100vh-90px)] sm:h-[85vh]">
         <div class="max-w-7xl mx-auto w-full h-full p-6">
             <div class="w-full h-full flex flex-col-reverse sm:flex-row gap-2">
                 <article class="w-full sm:w-2/3 lg:w-1/2 h-full flex flex-col justify-center">
@@ -550,7 +606,8 @@
         </div>
     </footer>
 
-    <script src="./assets/scripts/animation.js"></script>
+    <script type="module" src="./assets/scripts/animation.js"></script>
+    <script type="module" src="./assets/scripts/mobile-menu.js"></script>
     <script src="./assets/scripts/data-dynamic-values.js"></script>
 </body>
 </html>

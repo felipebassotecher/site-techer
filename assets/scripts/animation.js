@@ -1,3 +1,5 @@
+import { viewportUtils } from './viewport-utils.js';
+
 const animationKey = 'data-custom-animation';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -16,6 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
             observer.observe(element);
             const animation = element.getAttribute(animationKey);
             element.classList.remove(animation);
-            element.style.opacity = '0'; // Hide initially
+            if (viewportUtils.isMobile()) {
+                element.style.opacity = '0'; // Hide initially
+            }
         });
 });
