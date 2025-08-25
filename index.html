@@ -9,7 +9,7 @@
     <link href="./assets/styles/tailwindcss-result.css" rel="stylesheet">
 </head>
 <body class="bg-background-dark relative">
-    <nav class="bg-background-dark block w-full sticky top-0">
+    <nav class="bg-background-dark block w-full sticky top-0 z-(--index-navigation)">
         <div class="max-w-7xl mx-auto w-full flex items-center gap-4 p-6">
             <aside class="w-40">
                 <img src="assets/images/techer-logo.png" alt="Logo Techer">
@@ -43,7 +43,7 @@
                         </a>
                     </footer>
                 </article>
-                <aside class="w-full sm:1/3 lg:w-1/2 h-full flex items-center justify-center">
+                <aside data-custom-animation="animate-zoom" class="animate-zoom w-full sm:1/3 lg:w-1/2 h-full flex items-center justify-center">
                     <img
                         class="w-full max-w-60 sm:max-w-120"
                         src="assets/images/example-image.png"
@@ -550,6 +550,7 @@
         </div>
     </footer>
 
+    <script src="./assets/scripts/animation.js"></script>
     <script src="./assets/scripts/data-dynamic-values.js"></script>
 </body>
 </html>
