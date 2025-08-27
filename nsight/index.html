@@ -27,16 +27,16 @@
             <div
                 id="mobile-menu"
                 style="display: block;"
-                class="animate-mobile-menu sm:animate-none fixed sm:static bg-background-dark sm:bg-transparent inset-0 sm:inset-auto ml-0 sm:ml-auto w-screen h-screen sm:w-auto sm:h-auto transition-opacity ease-in-out duration-500"
+                class="animate-mobile-menu sm:animate-none fixed sm:static bg-gray-100 sm:bg-transparent inset-0 sm:inset-auto ml-0 sm:ml-auto w-screen h-screen sm:w-auto sm:h-auto transition-opacity ease-in-out duration-500"
                 data-custom-animation="animate-mobile-menu">
                 <div class="flex flex-col">
                     <header class="block sm:hidden p-2 px-4">
-                        <div class="flex items-center justify-between gap-4">
+                        <div class="flex items-center justify-between gap-4 text-gray-600">
                             <button data-toggle="mobile-menu" class="w-6 h-6">
-                                <span class="material-icons text-white">close</span>
+                                <span class="material-icons text-current">close</span>
                             </button>
                             <a class="block w-40" data-toggle="mobile-menu" href=".">
-                                <img src="assets/images/techer-logo.png" alt="Logo Techer">
+                                <img src="assets/images/techer-logo-primary.png" alt="Logo Techer">
                             </a>
                             <!-- Spacer -->
                             <aside class="w-6 h-6">
@@ -44,9 +44,9 @@
                             </aside>
                         </div>
                     </header>
-                    <ul class="flex flex-col sm:flex-row items-start sm:items-center gap-0 sm:gap-4 w-full sm:w-fit">
-                        <li class="w-full sm:w-fit border-t border-b border-gray-400 sm:border-none p-4 sm:p-0">
-                            <a href="." class="flex items-center justify-start w-full sm:block text-white font-semibold">
+                    <ul class="flex flex-col sm:flex-row items-start sm:items-center gap-0 w-full sm:w-fit p-8 sm:p-0">
+                        <li class="w-full sm:w-fit border-t-2 border-b-2 border-gray-400 sm:border-none p-0">
+                            <a href="." class="flex items-center justify-start w-full sm:block text-color-content-base sm:text-white hover:text-color2 font-bold border-b-4 border-transparent p-4 sm:p-2 sm:px-4 transition ease-in-out">
                                 <span class="inline-block text-current">
                                     Início
                                 </span>
@@ -57,8 +57,8 @@
                                 </span>
                             </a>
                         </li>
-                        <li class="w-full sm:w-fit border-b border-gray-400 sm:border-none p-4 sm:p-0">
-                            <a href="nsight" class="flex items-center justify-start w-full sm:block text-white font-semibold">
+                        <li class="w-full sm:w-fit border-b-2 border-gray-400 sm:border-none p-0">
+                            <a href="nsight" class="flex items-center justify-start w-full sm:block text-color1 sm:text-white font-bold border-b-0 sm:border-b-4 border-color2 hover:border-color2-dark p-4 sm:p-2 sm:px-4 transition ease-in-out">
                                 <span class="inline-block text-current">
                                     NSight
                                 </span>
@@ -69,20 +69,8 @@
                                 </span>
                             </a>
                         </li>
-                        <!-- <li class="w-full sm:w-fit border-b border-gray-400 sm:border-none p-4 sm:p-0">
-                            <a href="#" class="flex items-center justify-start w-full sm:block text-white font-semibold">
-                                <span class="inline-block text-current">
-                                    Fale Conosco
-                                </span>
-                                <span class="flex sm:hidden ml-auto">
-                                    <span class="material-icons text-current">
-                                        chevron_right
-                                    </span>
-                                </span>
-                            </a>
-                        </li> -->
-                        <li class="w-full sm:w-fit border-b border-gray-400 sm:border-none p-4 sm:p-0">
-                            <a href="fale-conosco" class="flex items-center font-bold bg-color2 text-on-color2 text-base sm:text-lg p-2 px-4 sm:px-4 sm:py-2 rounded-full hover:bg-color2-dark w-full sm:w-fit">
+                        <li class="w-full sm:w-fit border-b-2 border-transparent sm:border-none py-4 sm:p-0">
+                            <a href="fale-conosco" class="flex items-center font-bold bg-color2 text-on-color2 text-base sm:text-lg p-2 px-4 sm:px-4 sm:py-2 rounded-full hover:bg-color2-dark w-full sm:w-fit transition ease-in-out">
                                 <span class="inline-block">
                                     Entre em contato
                                 </span>
