@@ -21,6 +21,8 @@
   --index-navigation: 100;
 
   --animate-zoom: zoom 1s ease-in-out forwards;
+  --animate-mobile-menu: mobile-menu 0.5s ease-in-out forwards;
+
   @keyframes zoom {
     0% {
       opacity: 0;
@@ -29,6 +31,17 @@
     100% {
       opacity: 1;
       transform: scale(1);
+    }
+  }
+
+  @keyframes mobile-menu {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
     }
   }
 }

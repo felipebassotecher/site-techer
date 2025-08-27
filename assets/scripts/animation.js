@@ -1,25 +1,28 @@
-import { viewportUtils } from './viewport-utils.js';
-
 const animationKey = 'data-custom-animation';
+const animateOn = 'data-custom-animation-on';
 
 document.addEventListener('DOMContentLoaded', () => {
-    const observer = new IntersectionObserver((entries) => {
+    const appearOnViewportObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const animation = entry.target.getAttribute(animationKey);
                 entry.target.classList.add(animation);
-                observer.unobserve(entry.target); // Optional: Stop observing after animation
+                appearOnViewportObserver.unobserve(entry.target); // Optional: Stop observing after animation
             }
         });
     }, { threshold: 0.5 }); // Trigger when 50% of the element is visible
 
     document.querySelectorAll(`[${animationKey}]`)
         .forEach(element => {
-            observer.observe(element);
-            const animation = element.getAttribute(animationKey);
-            element.classList.remove(animation);
-            if (viewportUtils.isMobile()) {
-                element.style.opacity = '0'; // Hide initially
+            const shouldAnimateOn = element.getAttribute(animateOn);
+
+            switch(shouldAnimateOn) {
+                case 'appear':
+                case 'undefined':
+                    appearOnViewportObserver.observe(element);
+                    const animation = element.getAttribute(animationKey);
+                    element.classList.remove(animation);
+                    break;
             }
         });
 });
