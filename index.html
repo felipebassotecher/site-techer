@@ -43,7 +43,7 @@
                     </header>
                     <ul class="flex flex-col sm:flex-row items-start sm:items-center gap-0 sm:gap-4 w-full sm:w-fit">
                         <li class="w-full sm:w-fit border-t border-b border-gray-400 sm:border-none p-4 sm:p-0">
-                            <a href="#" class="flex items-center justify-start w-full sm:block text-white font-semibold">
+                            <a href="/" class="flex items-center justify-start w-full sm:block text-white font-semibold">
                                 <span class="inline-block text-current">
                                     Início
                                 </span>
@@ -55,7 +55,7 @@
                             </a>
                         </li>
                         <li class="w-full sm:w-fit border-b border-gray-400 sm:border-none p-4 sm:p-0">
-                            <a href="#" class="flex items-center justify-start w-full sm:block text-white font-semibold">
+                            <a href="/nsight" class="flex items-center justify-start w-full sm:block text-white font-semibold">
                                 <span class="inline-block text-current">
                                     NSight
                                 </span>
@@ -105,9 +105,22 @@
                     <h2 class="text-3xl md:text-4xl lg:text-5xl text-white mt-4 text-center md:text-left">
                         Software House
                     </h2>
-                    <footer class="flex items-center justify-center md:justify-start gap-4 mt-20">
+                    <footer class="flex flex-wrap flex-col md:flex-row items-center md:items-start justify-center md:justify-start gap-4 mt-20">
                         <a href="#sobre-a-techer" class="bg-color1 text-white text-base sm:text-lg p-2 px-4 sm:p-6 sm:py-4 rounded-full hover:bg-color1-dark">
                             Conheça a Techer
+                        </a>
+                        <a href="/nsight" class="flex items-center gap-2 bg-transparent text-color1 border-2 border-color1 text-base sm:text-lg py-0 px-4 sm:p-6 sm:py-2 rounded-full hover:bg-color1 hover:text-on-color1">
+                            <span class="text-current">
+                                Conheça o
+                                <span class="hidden sm:inline">projeto</span>
+                                NSight
+                            </span>
+                            <img
+                                class="w-10 h-10"
+                                src="assets/images/nsight/icon-512x512-white.png"
+                                alt="Ícone do NSight"
+                                width="40"
+                                height="40">
                         </a>
                     </footer>
                 </article>
@@ -217,7 +230,7 @@
                     Nosso escritório, nossa experiência e nossa especialidade
                 </h3>
             </header>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 sm:gap-6 mt-12">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-6 mt-12">
                 <!-- Foto -->
                 <aside class="w-full h-full min-h-80 shadow-md">
                     <img
@@ -259,7 +272,7 @@
                             Startup Acelerada
                         </h4>
                     </header>
-                    <div class="flex gap-2">
+                    <div class="flex flex-col md:flex-row lg:flex-col xl:flex-row gap-2">
                         <img
                             class="w-40 h-40"
                             src="assets/images/brde_acelerado-300x300.png"
@@ -293,7 +306,12 @@
                     <footer class="flex mt-4">
                         <a href="#nsight" class="flex items-center gap-2 bg-color1 text-white text-base py-0.5 px-4 rounded-full hover:bg-color1-dark">
                             <span class="text-current">
-                                Confira nossa solução
+                                <span class="hidden sm:inline">
+                                    Confira
+                                </span>
+                                <span class="normal-case sm:lowercase">
+                                    Nossa solução
+                                </span>
                             </span>
                             <img
                                 class="w-9 h-9"
