@@ -1082,10 +1082,24 @@
       }
     }
   }
+  .hover\:text-color1 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-color1);
+      }
+    }
+  }
   .hover\:text-color2 {
     &:hover {
       @media (hover: hover) {
         color: var(--color-color2);
+      }
+    }
+  }
+  .hover\:text-gray-400 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-gray-400);
       }
     }
   }
@@ -1104,6 +1118,11 @@
   .sm\:inset-auto {
     @media (width >= 40rem) {
       inset: auto;
+    }
+  }
+  .sm\:ml-4 {
+    @media (width >= 40rem) {
+      margin-left: calc(var(--spacing) * 4);
     }
   }
   .sm\:ml-auto {
