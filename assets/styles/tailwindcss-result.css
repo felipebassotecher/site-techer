@@ -1110,6 +1110,13 @@
       }
     }
   }
+  .hover\:underline {
+    &:hover {
+      @media (hover: hover) {
+        text-decoration-line: underline;
+      }
+    }
+  }
   .sm\:static {
     @media (width >= 40rem) {
       position: static;
