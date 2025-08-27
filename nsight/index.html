@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NSight | Techer Software House</title>
-    <base href="https://felipebassotecher.github.io/site-techer/">
+    <title>NSight | Techer | Software House</title>
+    <!-- <base href="https://felipebassotecher.github.io/site-techer/"> -->
+    <base href="/">
+    <link rel="shortcut icon" href="favicon-nsight-32x32.png" type="image/png">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
     <link href="./assets/styles/tailwindcss-result.css" rel="stylesheet">
@@ -15,9 +17,9 @@
             <button data-toggle="mobile-menu" class="flex sm:hidden w-6 h-6">
                 <span class="material-icons text-white">menu</span>
             </button>
-            <aside class="w-40">
+            <a class="block w-40" href=".">
                 <img src="assets/images/techer-logo.png" alt="Logo Techer">
-            </aside>
+            </a>
             <!-- Spacer -->
             <aside class="flex sm:hidden w-6 h-6">
                 &nbsp;
@@ -33,7 +35,7 @@
                             <button data-toggle="mobile-menu" class="w-6 h-6">
                                 <span class="material-icons text-white">close</span>
                             </button>
-                            <a class="block w-40" data-toggle="mobile-menu" href="#home">
+                            <a class="block w-40" data-toggle="mobile-menu" href=".">
                                 <img src="assets/images/techer-logo.png" alt="Logo Techer">
                             </a>
                             <!-- Spacer -->
@@ -314,6 +316,72 @@
             </footer>
         </div>
     </section>
+    <section id="historia-nsight" class="bg-white block w-full py-24">
+        <div class="max-w-7xl mx-auto w-full p-6">
+            <header class="flex flex-col md:flex-row justify-center md:justify-start items-center md:items-start gap-4">
+                <div class="leading-28">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl text-center md:text-left">
+                        O protagonista das <span class="text-nowrap">indústrias 4.0</span>
+                    </h2>
+                    <h3 class="text-color1 text-xl text-center md:text-left mt-8">
+                        Proposta inédita para a indústria lançada no programa <span class="text-nowrap">BRDE Labs 2024</span>.
+                    </h3>
+                </div>
+                <img
+                    class="ml-0 md:ml-auto h-20 object-contain"
+                    src="/assets/images/logo-desafios-brde-2024.png"
+                    alt="">
+            </header>
+            <div class="flex flex-col gap-8 mt-12">
+                <div class="flex flex-col-reverse md:flex-row gap-8 pl-0 md:pl-12">
+                    <p class="text-left w-full md:w-2/3">
+                        Com os anos de experiência da Techer no setor industrial,
+                        muitos problemas foram observados.
+                        Nosso histórico de mais de 15 anos desenvolvendo
+                        soluções digitais nos trouxe o insight de que não há
+                        problema que não possa ser resolvido,
+                        apenas ainda não se sabe como resolver.
+                        <br/><br/>
+                        Por isso, após uma longa jornada de estudos e levantamento
+                        de requisitos com especialistas tanto da indústria
+                        quanto do setor de tecnologia e inovação,
+                        a Techer decidiu investir na concepção de uma ferramenta
+                        que seja capaz de integrar o ápice da modernidade tecnológica
+                        com os processos produtivos dos mais variados tipos de indústria.
+                    </p>
+                    <aside class="w-full md:w-1/3 h-min max-h-[30vh] overflow-hidden">
+                        <img
+                            class="w-full h-full object-cover"
+                            src="assets/images/nsight-historia-apresentacao.png"
+                            alt="NSight apresentação">
+                    </aside>
+                </div>
+                <div class="flex flex-col md:flex-row gap-8 pl-0 md:pl-12">
+                    <aside class="w-full md:w-1/3 h-min max-h-[30vh] overflow-hidden">
+                        <img
+                            class="w-full h-full object-cover"
+                            src="assets/images/nsight-use-case.png"
+                            alt="NSight apresentação">
+                    </aside>
+                    <p class="text-left w-full md:w-2/3">
+                        Com os anos de experiência da Techer no setor industrial,
+                        muitos problemas foram observados.
+                        Nosso histórico de mais de 15 anos desenvolvendo
+                        soluções digitais nos trouxe o insight de que não há
+                        problema que não possa ser resolvido,
+                        apenas ainda não se sabe como resolver.
+                        <br/><br/>
+                        Por isso, após uma longa jornada de estudos e levantamento
+                        de requisitos com especialistas tanto da indústria
+                        quanto do setor de tecnologia e inovação,
+                        a Techer decidiu investir na concepção de uma ferramenta
+                        que seja capaz de integrar o ápice da modernidade tecnológica
+                        com os processos produtivos dos mais variados tipos de indústria.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="bg-color1 text-on-color1 relative block w-full py-24 before:absolute before:inset-0 before:w-full before:h-full before:bg-[url(../images/wave-art-bg-black-top.svg)] before:bg-cover before:bg-top before:bg-no-repeat before:opacity-20 before:mix-blend-overlay before:z-0">
         <div class="relative max-w-7xl mx-auto w-full p-6 z-10">
             <h2 class="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-10 sm:leading-14">
@@ -338,9 +406,9 @@
     <footer class="bg-background-dark text-white block w-full pt-12 pb-2">
         <div class="max-w-7xl mx-auto w-full p-6">
             <div class="flex flex-col md:flex-row items-center sm:items-start gap-8 lg:gap-12">
-                <aside class="w-40 lg:w-60 hidden sm:block">
+                <a class="w-40 lg:w-60 hidden sm:block" href=".">
                     <img src="assets/images/techer-logo.png" alt="Logo Techer">
-                </aside>
+                </a>
                 <nav class="flex-auto">
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-2">
                         <!-- Techer Links -->
