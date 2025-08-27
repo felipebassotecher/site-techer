@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | Software House</title>
+    <!-- <base href="https://felipebassotecher.github.io/site-techer/"> -->
+    <base href="/">
+    <link rel="shortcut icon" href="favicon-techer.png" type="image/png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link href="./assets/styles/tailwindcss-result.css" rel="stylesheet">
+</head>
+<body class="bg-background-dark relative text-sm sm:text-base">
+    <nav class="bg-background-dark block w-full sticky top-0 z-(--index-navigation)">
+        <div class="max-w-7xl mx-auto w-full flex items-center justify-between sm:justify-start gap-4 p-2 px-4 sm:p-6">
+            <button data-toggle="mobile-menu" class="flex sm:hidden w-6 h-6">
+                <span class="material-icons text-white">menu</span>
+            </button>
+            <a class="block w-40" href=".">
+                <img src="assets/images/techer-logo.png" alt="Logo Techer">
+            </a>
+            <!-- Spacer -->
+            <aside class="flex sm:hidden w-6 h-6">
+                &nbsp;
+            </aside>
+            <div
+                id="mobile-menu"
+                style="display: block;"
+                class="animate-mobile-menu sm:animate-none fixed sm:static bg-background-dark sm:bg-transparent inset-0 sm:inset-auto ml-0 sm:ml-auto w-screen h-screen sm:w-auto sm:h-auto transition-opacity ease-in-out duration-500"
+                data-custom-animation="animate-mobile-menu">
+                <div class="flex flex-col">
+                    <header class="block sm:hidden p-2 px-4">
+                        <div class="flex items-center justify-between gap-4">
+                            <button data-toggle="mobile-menu" class="w-6 h-6">
+                                <span class="material-icons text-white">close</span>
+                            </button>
+                            <a class="block w-40" data-toggle="mobile-menu" href=".">
+                                <img src="assets/images/techer-logo.png" alt="Logo Techer">
+                            </a>
+                            <!-- Spacer -->
+                            <aside class="w-6 h-6">
+                                &nbsp;
+                            </aside>
+                        </div>
+                    </header>
+                    <ul class="flex flex-col sm:flex-row items-start sm:items-center gap-0 sm:gap-4 w-full sm:w-fit">
+                        <li class="w-full sm:w-fit border-t border-b border-gray-400 sm:border-none p-4 sm:p-0">
+                            <a href="." class="flex items-center justify-start w-full sm:block text-white font-semibold">
+                                <span class="inline-block text-current">
+                                    Início
+                                </span>
+                                <span class="flex sm:hidden ml-auto">
+                                    <span class="material-icons text-current">
+                                        chevron_right
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="w-full sm:w-fit border-b border-gray-400 sm:border-none p-4 sm:p-0">
+                            <a href="nsight" class="flex items-center justify-start w-full sm:block text-white font-semibold">
+                                <span class="inline-block text-current">
+                                    NSight
+                                </span>
+                                <span class="flex sm:hidden ml-auto">
+                                    <span class="material-icons text-current">
+                                        chevron_right
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+                        <!-- <li class="w-full sm:w-fit border-b border-gray-400 sm:border-none p-4 sm:p-0">
+                            <a href="#" class="flex items-center justify-start w-full sm:block text-white font-semibold">
+                                <span class="inline-block text-current">
+                                    Fale Conosco
+                                </span>
+                                <span class="flex sm:hidden ml-auto">
+                                    <span class="material-icons text-current">
+                                        chevron_right
+                                    </span>
+                                </span>
+                            </a>
+                        </li> -->
+                        <li class="w-full sm:w-fit border-b border-gray-400 sm:border-none p-4 sm:p-0">
+                            <a href="fale-conosco" class="flex items-center font-bold bg-color2 text-on-color2 text-base sm:text-lg p-2 px-4 sm:px-4 sm:py-2 rounded-full hover:bg-color2-dark w-full sm:w-fit">
+                                <span class="inline-block">
+                                    Entre em contato
+                                </span>
+                                <span class="flex sm:hidden ml-auto">
+                                    <span class="material-icons text-current">
+                                        chevron_right
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <footer class="bg-background-dark text-white block w-full pt-12 pb-2">
+        <div class="max-w-7xl mx-auto w-full p-6">
+            <div class="flex flex-col md:flex-row items-center sm:items-start gap-8 lg:gap-12">
+                <a class="w-40 lg:w-60 hidden sm:block" href=".">
+                    <img src="assets/images/techer-logo.png" alt="Logo Techer">
+                </a>
+                <nav class="flex-auto">
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-2">
+                        <!-- Techer Links -->
+                        <div class="flex flex-col items-center sm:items-start gap-2 sm:gap-8">
+                            <span class="font-semibold text-color1 text-lg">
+                                Techer Software House
+                            </span>
+                            <ul class="flex flex-col items-center sm:items-start gap-2">
+                                <li>
+                                    <a href="#sobre-a-techer" class="text-white">
+                                        Sobre nós
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="nsight" class="text-white">
+                                        NSight
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#servicos" class="text-white">
+                                        Serviços
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="fale-conosco" class="text-white">
+                                        Contato
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Social -->
+                        <div class="flex flex-col items-center sm:items-start gap-2 sm:gap-8">
+                            <span class="font-semibold text-color1 text-lg">
+                                Siga
+                            </span>
+                            <ul class="flex flex-row sm:flex-col items-center sm:items-start gap-6 sm:gap-2">
+                                <li>
+                                    <a href="https://www.linkedin.com/company/techerbr" target="_blank" class="text-white flex items-center gap-2">
+                                        <img
+                                            class="text-current w-8 sm:w-6"
+                                            src="assets/images/social/linkedin-logo-rounded-primary.png"
+                                            alt="LinkedIn logo">
+                                        <span class="hidden sm:inline-block">
+                                            LinkedIn
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/techerbr" target="_blank" class="text-white flex items-center gap-2">
+                                        <img
+                                            class="text-current w-8 sm:w-6"
+                                            src="assets/images/social/instagram-logo-rounded-primary.png"
+                                            alt="Instagram logo">
+                                        <span class="hidden sm:inline-block">
+                                            Instagram
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://x.com/techerbr" target="_blank" class="text-white flex items-center gap-2">
+                                        <img
+                                            class="text-white w-8 sm:w-6"
+                                            src="assets/images/social/x-logo-rounded-primary.png"
+                                            alt="X logo">
+                                        <span class="hidden sm:inline-block">
+                                            X
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Contato -->
+                        <div class="flex flex-col items-center sm:items-start gap-2 sm:gap-8">
+                            <span class="font-semibold text-color1 text-lg">
+                                Entre em contato
+                            </span>
+                            <ul class="flex flex-col items-center sm:items-start gap-2">
+                                <li>
+                                    <a href="tel:+554130730091" class="text-white">
+                                        (41) 3073-0091
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="mailto:contato@techer.com.br" class="text-white">
+                                        contato@techer.com.br
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <hr class="w-full border-gray-400 my-2"/>
+        <div class="max-w-7xl mx-auto w-full p-6">
+            <div class="flex flex-col sm:flex-row gap-4 justify-center sm:justify-between items-center">
+                <span class="text-center leading-6">
+                    &copy;
+                    <span data-dynamic-value="currentYear"></span>
+                    Techer. Todos os direitos reservados.
+                </span>
+                <a href="#" class="underline">
+                    Política de Privacidade
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="./assets/scripts/animation.js"></script>
+    <script type="module" src="./assets/scripts/mobile-menu.js"></script>
+    <script src="./assets/scripts/smooth-scroll-anchors.js"></script>
+    <script src="./assets/scripts/data-dynamic-values.js"></script>
+</body>
+</html>
