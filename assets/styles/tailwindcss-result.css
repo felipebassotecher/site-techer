@@ -725,6 +725,24 @@
       overflow: hidden;
     }
   }
+  .before\:bg-\[url\(\.\.\/images\/wave-art-bg-black-top\.svg\)\] {
+    &::before {
+      content: var(--tw-content);
+      background-image: url(../images/wave-art-bg-black-top.svg);
+    }
+  }
+  .before\:bg-\[url\(\.\.\/images\/wave-art-bg-white-down\.svg\)\] {
+    &::before {
+      content: var(--tw-content);
+      background-image: url(../images/wave-art-bg-white-down.svg);
+    }
+  }
+  .before\:bg-\[url\(\.\/assets\/images\/wave-art-bg-white-down\.svg\)\] {
+    &::before {
+      content: var(--tw-content);
+      background-image: url(./assets/images/wave-art-bg-white-down.svg);
+    }
+  }
   .before\:bg-\[url\(\/assets\/images\/wave-art-bg-black-top\.svg\)\] {
     &::before {
       content: var(--tw-content);
