@@ -1,6 +1,12 @@
 # TailwindCSS
 assets/styles/tailwindcss-result.css
 
+# API Config files
+api/Database/Config/*
+!api/Database/Config/*.example.ini
+api/Integrations/Config/*
+!api/Integrations/Config/*.example.ini
+
 # Logs
 logs
 *.log
