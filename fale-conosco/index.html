@@ -88,7 +88,7 @@
                             </a>
                         </li>
                         <li class="w-full sm:w-fit border-b-2 border-transparent sm:border-none py-4 sm:p-0 ml-0 sm:ml-4">
-                            <a href="fale-conosco" class="flex items-center font-bold bg-color2 text-on-color2 text-base sm:text-lg p-2 px-4 sm:px-4 sm:py-2 rounded-full hover:bg-color2-dark w-full sm:w-fit transition ease-in-out">
+                            <a href="fale-conosco" class="flex items-center font-bold bg-color2 text-on-color2 border-2 border-color2 text-base sm:text-lg p-2 px-4 sm:px-4 sm:py-2 rounded-full hover:bg-transparent hover:text-color2 w-full sm:w-fit transition ease-in-out">
                                 <span class="inline-block">
                                     Entre em contato
                                 </span>
@@ -104,6 +104,150 @@
             </div>
         </div>
     </nav>
+
+    <main id="home" class="bg-background-dark relative flex items-center justify-center w-full h-fit before:absolute before:inset-0 before:bg-cover before:w-full before:h-full before:bg-[url(../images/wave-art-bg-white-down.svg)] before:bg-bottom before:bg-no-repeat before:opacity-50 before:mix-blend-overlay before:z-0">
+        <div class="relative max-w-7xl mx-auto w-full h-full p-16 z-10 flex items-center justify-center">
+            <header class="w-full h-full flex flex-col justify-center items-center gap-8 md:gap-2">
+                <h1 class="text-3xl md:text-4xl lg:text-5xl text-white text-center md:text-left leading-12 sm:leading-16">
+                    Fale conosco
+                </h1>
+                <p class="text-lg md:text-xl lg:text-2xl text-white mt-4 text-center md:text-left leading-8 sm:leading-10 font-light">
+                    Entre em contato e vamos conversar!
+                </p>
+            </header>
+        </div>
+    </main>
+
+    <section class="bg-gray-100 block w-full py-12 sm:py-24">
+        <div class="max-w-7xl mx-auto w-full px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="flex flex-col items-center gap-4">
+                    <span class="material-icons text-color1 scale-150">mail</span>
+                    <h2 class="text-lg md:text-xl lg:text-2xl font-bold leading-10">
+                        E-mail
+                    </h2>
+                    <p class="text-color-content-base text-center text-lg lg:text-xl leading-10">
+                        contato@techer.com.br
+                    </p>
+                </div>
+                <div class="flex flex-col items-center gap-4">
+                    <span class="material-icons text-color1 scale-150">map</span>
+                    <h2 class="text-lg md:text-xl lg:text-2xl font-bold leading-10">
+                        Escritório
+                    </h2>
+                    <p class="text-color-content-base text-center text-lg lg:text-xl leading-10">
+                        Av. República Argentina, 1228
+                        -
+                        <span class="text-nowrap">
+                            Água Verde, Curitiba - PR
+                        </span>
+                    </p>
+                </div>
+                <div class="flex flex-col items-center gap-4">
+                    <span class="material-icons text-color1 scale-150">phone</span>
+                    <h2 class="text-lg md:text-xl lg:text-2xl font-bold leading-10">
+                        Telefone
+                    </h2>
+                    <p class="text-color1 text-2xl lg:text-3xl font-bold leading-10">
+                        (41) 3073-0091
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white block w-full py-24">
+        <div class="max-w-7xl mx-auto w-full p-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 md:gap-12">
+                <div class="flex flex-col gap-4">
+                    <h3 class="text-2xl md:text-3xl lg:text-4xl text-color1 font-semibold leading-10">
+                        Nos envie uma mensagem
+                    </h3>
+                    <form class="flex flex-col gap-4 shadow-lg p-8 bg-white rounded">
+                        <div class="flex flex-col gap-1">
+                            <label for="name" class="text-sm font-bold text-color1">
+                                Nome
+                            </label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                class="border border-gray-300 p-2 rounded focus:outline-color1"
+                                placeholder="Seu nome">
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <label for="phone" class="text-sm font-bold text-color1">
+                                Telefone
+                            </label>
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                class="border border-gray-300 p-2 rounded focus:outline-color1"
+                                placeholder="Seu telefone">
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <label for="email" class="text-sm font-bold text-color1">
+                                E-mail
+                            </label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                class="border border-gray-300 p-2 rounded focus:outline-color1"
+                                placeholder="Seu e-mail">
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <label for="message" class="text-sm font-bold text-color1">
+                                Mensagem
+                            </label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                class="border border-gray-300 p-2 rounded focus:outline-color1"
+                                rows="4"
+                                placeholder="Sua mensagem"></textarea>
+                        </div>
+                        <button type="submit" class="text-center font-bold bg-color1 text-on-color1 text-base sm:text-lg p-2 px-4 sm:px-4 sm:py-2 rounded-full hover:bg-color1-dark w-full transition ease-in-out">
+                            Enviar mensagem
+                        </button>
+                    </form>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <h3 class="text-2xl md:text-3xl lg:text-4xl text-color1 font-semibold leading-10">
+                        Venha nos visitar
+                    </h3>
+                    <aside class="flex items-center gap-4 p-4 border-l-4 border-color1">
+                        <span class="material-icons text-color1 scale-125">coffee</span>
+                        <p>
+                            O café é por nossa conta!
+                            <span class="text-nowrap">Venha visitar nosso escritório</span>.
+                        </p>
+                    </aside>
+                    <div class="w-full h-full overflow-hidden">
+                        <iframe
+                            class="hidden md:block"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.4328879735544!2d-49.28923578162403!3d-25.457216862655144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce3fb765d7a4d%3A0x1f7a7e9ab53150b2!2sTecher!5e0!3m2!1sen!2sbr!4v1756749661995!5m2!1sen!2sbr"
+                            width="600"
+                            height="450"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe
+                            class="block md:hidden"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.4328879735544!2d-49.28923578162403!3d-25.457216862655144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce3fb765d7a4d%3A0x1f7a7e9ab53150b2!2sTecher!5e0!3m2!1sen!2sbr!4v1756749661995!5m2!1sen!2sbr"
+                            width="400"
+                            height="300"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     
     <footer class="bg-background-dark text-white block w-full pt-12 pb-2">
         <div class="max-w-7xl mx-auto w-full p-6">
@@ -222,6 +366,7 @@
         </div>
     </footer>
 
+    <script src="./assets/scripts/contact-us.js"></script>
     <script type="module" src="./assets/scripts/animation.js"></script>
     <script type="module" src="./assets/scripts/mobile-menu.js"></script>
     <script src="./assets/scripts/smooth-scroll-anchors.js"></script>
