@@ -107,7 +107,7 @@
     </nav>
     <main id="home" class="bg-background-dark relative block w-full h-fit min-h-[calc(100vh-90px)] sm:h-[85vh] before:absolute before:inset-0 before:w-full before:h-full before:bg-[url(../images/wave-art-bg-white-down.svg)] before:bg-bottom before:bg-no-repeat before:opacity-50 before:mix-blend-overlay before:z-0">
         <div class="relative max-w-7xl mx-auto w-full h-full p-6 z-10">
-            <div class="w-full h-full flex flex-col-reverse md:flex-row justify-center items-center gap-8 md:gap-2">
+            <div class="w-full h-full flex flex-col-reverse md:flex-row justify-center items-center gap-8">
                 <article class="w-full sm:w-2/3 lg:w-1/2 h-full flex flex-col justify-center">
                     <h1 class="text-3xl md:text-4xl lg:text-5xl text-white text-center md:text-left leading-12 sm:leading-16">
                         NSight
@@ -132,7 +132,7 @@
                     data-custom-animation-on="appear"
                     class="animate-zoom w-2/3 sm:w-1/2 h-full flex items-center justify-center">
                     <img
-                        class="w-full max-w-60 sm:max-w-120"
+                        class="w-full max-w-100 sm:max-w-200"
                         src="assets/images/nsight-desktop-and-tablet-mockup.png"
                         alt="Mockup de telas e dashboards do NSight">
                 </aside>
@@ -143,34 +143,74 @@
         <div class="max-w-7xl mx-auto w-full p-6">
             <header class="leading-28">
                 <h2 class="text-center text-3xl sm:text-4xl md:text-5xl">
-                    O que o NSight pode fazer pela sua empresa?
+                    O que o <span class="text-color2-dark font-bold">NSight</span> pode fazer pela sua empresa?
                 </h2>
                 <h3 class="text-color1 text-center text-xl mt-8">
                     Veja como o NSight pode transformar o seu negócio.
                 </h3>
             </header>
             <div class="flex flex-col md:flex-row gap-10 mt-12">
-                <div class="w-full md:w-7/12">
-                    <p class="text-2xl font-bold leading-10 text-center md:text-left">
-                        O NSight não apenas garante ao seu negócio mais qualidade -
-                        garante que você tenha
-                        <span class="text-color2-dark">
-                            mais tempo para focar no que realmente importa
-                        </span>
-                        para a sua empresa.
-                    </p>
+                <div class="flex flex-col gap-4 w-full md:w-5/12">
+                    <div class="w-full">
+                        <p class="text-2xl font-bold leading-10 text-center md:text-left">
+                            O <span class="text-color2-dark">NSight</span>
+                            não apenas garante ao seu negócio mais qualidade -
+                            garante que você tenha
+                            <span class="text-color2-dark">
+                                mais tempo para focar no que realmente importa
+                            </span>
+                            para a sua empresa.
+                        </p>
+                    </div>
+    
+                    <div class="w-full">
+                        <p class="text-base text-center md:text-left">
+                            Aumentar o time de QA não é sinônimo de aumento de
+                            qualidade da sua produção. Por isso, o NSight não só
+                            trará mais qualidade, mas, também, mais tempo para focar
+                            no que realmente importa para o seu negócio.
+                            Com inteligência, ao invés de apenas resolver problemas,
+                            você atinge objetivos.
+                        </p>
+                    </div>
                 </div>
-
-                <div class="w-full md:w-5/12">
-                    <p class="text-base text-center md:text-left">
-                        Aumentar o time de QA não é sinônimo de aumento de
-                        qualidade da sua produção. Por isso, o NSight não só
-                        trará mais qualidade, mas, também, mais tempo para focar
-                        no que realmente importa para o seu negócio.
-                        Com inteligência, ao invés de apenas resolver problemas,
-                        você atinge objetivos.
-                    </p>
-                </div>
+                <aside class="relative flex justify-center items-center w-full md:w-7/12 h-full min-h-80 bg-gray-100 shadow-md overflow-hidden">
+                    <img
+                        data-nsight-video-cover="true"
+                        data-nsight-video-target="nsight-trace-app-video"
+                        class="hidden object-cover w-full h-full"
+                        src="assets/images/nsight/nsight-trace-app-video-cover.jpg"
+                        alt="Imagem do aplicativo NSight Trace">
+                    <video
+                        data-nsight-video="true"
+                        data-nsight-video-id="nsight-trace-app-video"
+                        data-nsight-video-autoplay="true"
+                        class="object-cover w-full h-full" muted loop>
+                        <source
+                            class="w-full h-full"
+                            src="assets/videos/nsight-trace-app-take-003.mp4"
+                            type="video/mp4">
+                        Seu navegador não suporta o elemento de vídeo.
+                    </video>
+                    <div class="absolute -bottom-28 -left-28 rounded-full bg-radial from-color1 to-transparent to-50% p-32">
+                        <button
+                            data-nsight-video-control="play"
+                            data-nsight-video-target="nsight-trace-app-video"
+                            class="flex items-center justify-center cursor-pointer">
+                            <span class="material-icons text-white scale-125">
+                                play_arrow
+                            </span>
+                        </button>
+                        <button
+                            data-nsight-video-control="pause"
+                            data-nsight-video-target="nsight-trace-app-video"
+                            class="hidden items-center justify-center cursor-pointer">
+                            <span class="material-icons text-white scale-125">
+                                pause
+                            </span>
+                        </button>
+                    </div>
+                </aside>
             </div>
             <footer class="flex justify-center mt-8">
                 <a href="#ecossistema-nsight" class="bg-color1 text-white text-center text-base sm:text-lg p-2 px-4 sm:p-6 sm:py-4 rounded-full hover:bg-color1-dark transition ease-in-out">
@@ -183,7 +223,7 @@
         <div class="max-w-7xl mx-auto w-full p-6">
             <header>
                 <h2 class="text-center text-3xl sm:text-4xl md:text-5xl">
-                    O ecossistema NSight & sua integração
+                    O ecossistema <span class="text-color2-dark font-bold">NSight</span> & sua integração
                 </h2>
                 <h3 class="text-center text-xl mt-4">
                     O módulo ideal pode levar a sua empresa a um novo patamar.
@@ -273,22 +313,22 @@
                         <header class="w-full h-50 overflow-hidden">
                             <img
                                 class="object-cover w-full h-full"
-                                src="assets/images/nsight-use-case.png"
-                                alt="Case de uso de sucesso do NSight">
+                                src="assets/images/premio-techer-brde-labs-2024-2.jpg"
+                                alt="Case de sucesso do NSight">
                         </header>
                         <div class="p-4">
                             <h5 class="font-bold text-lg text-center">
-                                NSight Trace
+                                NSight é premiado
                             </h5>
                             <p class="text-center text-color-content-body mt-2">
                                 Caso de sucesso do
-                                NSight Trace no setor
+                                NSight é premiado no setor
                                 de indústria de alta precisão
                             </p>
                         </div>
                         <footer class="w-full flex justify-center p-4">
-                            <a href="#" class="bg-color1 text-white text-base sm:text-lg p-2 px-4 sm:p-6 sm:py-4 rounded-full hover:bg-color1-dark transition ease-in-out">
-                                Confira o caso
+                            <a href="#historia-nsight" class="bg-color1 text-white text-base sm:text-lg p-2 px-4 sm:p-6 sm:py-4 rounded-full hover:bg-color1-dark transition ease-in-out">
+                                Leia mais
                             </a>
                         </footer>
                     </article>
@@ -352,15 +392,24 @@
                         Por isso, após uma longa jornada de estudos e levantamento
                         de requisitos com especialistas tanto da indústria
                         quanto do setor de tecnologia e inovação,
-                        a Techer decidiu investir na concepção de uma ferramenta
-                        que seja capaz de integrar o ápice da modernidade tecnológica
-                        com os processos produtivos dos mais variados tipos de indústria.
+                        <span class="text-color1-dark">
+                            a <strong>Techer</strong> decidiu investir na concepção de uma ferramenta
+                        </span>
+                        que seja capaz de integrar o ápice da
+                        <span class="text-color1-dark">
+                            modernidade tecnológica
+                        </span>
+                        com os
+                        <span class="text-color1-dark">
+                            processos produtivos
+                        </span>
+                        dos mais variados tipos de indústria.
                     </p>
-                    <aside class="w-full md:w-1/3 h-min max-h-[30vh] overflow-hidden">
+                    <aside class="w-full md:w-1/3 h-min max-h-[25vh] overflow-hidden">
                         <img
                             class="w-full h-full object-cover"
-                            src="assets/images/nsight-historia-apresentacao.png"
-                            alt="NSight apresentação">
+                            src="assets/images/premio-techer-brde-labs-2024-1.jpeg"
+                            alt="Techer recebendo prêmio no BRDE Labs 2024">
                     </aside>
                 </div>
                 <div class="flex flex-col md:flex-row gap-8 pl-0 md:pl-12">
@@ -524,6 +573,7 @@
 
     <script type="module" src="./assets/scripts/animation.js"></script>
     <script type="module" src="./assets/scripts/mobile-menu.js"></script>
+    <script src="./assets/scripts/nsight-video-control.js"></script>
     <script src="./assets/scripts/smooth-scroll-anchors.js"></script>
     <script src="./assets/scripts/data-dynamic-values.js"></script>
 </body>

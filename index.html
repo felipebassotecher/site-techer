@@ -501,21 +501,34 @@
                 <!-- Foto -->
                 <aside class="relative block sm:hidden lg:block w-full h-full min-h-80 bg-gray-100 shadow-md overflow-hidden">
                     <img
-                        id="nsight-video-cover-img"
+                        data-nsight-video-cover="true"
+                        data-nsight-video-target="nsight-trace-app-video"
                         class="hidden object-cover w-full h-full"
                         src="assets/images/nsight/nsight-trace-app-video-cover.jpg"
                         alt="Imagem do aplicativo NSight Trace">
-                    <video id="nsight-video" class="object-cover w-full h-full" autoplay muted loop>
-                        <source src="assets/videos/nsight-trace-app-take-003.mp4" type="video/mp4">
+                    <video
+                        data-nsight-video="true"
+                        data-nsight-video-id="nsight-trace-app-video"
+                        data-nsight-video-autoplay="true"
+                        class="object-cover w-full h-full" muted loop>
+                        <source
+                            src="assets/videos/nsight-trace-app-take-003.mp4"
+                            type="video/mp4">
                         Seu navegador não suporta o elemento de vídeo.
                     </video>
                     <div class="absolute -bottom-28 -left-28 rounded-full bg-radial from-color1 to-transparent to-50% p-32">
-                        <button id="nsight-video-play-btn" class="flex items-center justify-center cursor-pointer">
+                        <button
+                            data-nsight-video-control="play"
+                            data-nsight-video-target="nsight-trace-app-video"
+                            class="flex items-center justify-center cursor-pointer">
                             <span class="material-icons text-white scale-125">
                                 play_arrow
                             </span>
                         </button>
-                        <button id="nsight-video-pause-btn" class="hidden items-center justify-center cursor-pointer">
+                        <button
+                            data-nsight-video-control="pause"
+                            data-nsight-video-target="nsight-trace-app-video"
+                            class="hidden items-center justify-center cursor-pointer">
                             <span class="material-icons text-white scale-125">
                                 pause
                             </span>
@@ -751,9 +764,9 @@
         </div>
     </footer>
 
-    <script src="./assets/scripts/home.js"></script>
     <script type="module" src="./assets/scripts/animation.js"></script>
     <script type="module" src="./assets/scripts/mobile-menu.js"></script>
+    <script src="./assets/scripts/nsight-video-control.js"></script>
     <script src="./assets/scripts/smooth-scroll-anchors.js"></script>
     <script src="./assets/scripts/data-dynamic-values.js"></script>
 </body>
