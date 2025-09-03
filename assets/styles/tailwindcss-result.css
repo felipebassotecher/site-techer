@@ -545,6 +545,9 @@
   .animate-zoom {
     animation: var(--animate-zoom);
   }
+  .cursor-pointer {
+    cursor: pointer;
+  }
   .resize {
     resize: both;
   }
@@ -1455,6 +1458,11 @@
   .sm\:max-w-140 {
     @media (width >= 40rem) {
       max-width: calc(var(--spacing) * 140);
+    }
+  }
+  .sm\:max-w-200 {
+    @media (width >= 40rem) {
+      max-width: calc(var(--spacing) * 200);
     }
   }
   .sm\:animate-none {
