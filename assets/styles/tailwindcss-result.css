@@ -965,6 +965,9 @@
   .text-color1 {
     color: var(--color-color1);
   }
+  .text-color1-dark {
+    color: var(--color-color1-dark);
+  }
   .text-color2 {
     color: var(--color-color2);
   }
