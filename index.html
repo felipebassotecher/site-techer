@@ -501,15 +501,18 @@
                     </p>
                 </article>
                 <!-- Foto -->
-                <aside class="block sm:hidden lg:block w-full h-full min-h-80 bg-gray-100 shadow-md">
+                <aside class="relative block sm:hidden lg:block w-full h-full min-h-80 bg-gray-100 shadow-md overflow-hidden">
                     <video class="object-cover w-full h-full" autoplay muted loop>
-                        <source src="assets/videos/nsight-trace-app.mp4" type="video/mp4">
+                        <source src="assets/videos/nsight-trace-app-take-003.mp4" type="video/mp4">
                         Seu navegador não suporta o elemento de vídeo.
                     </video>
-                    <!-- <img
-                        class="w-full h-full object-cover"
-                        src="assets/images/foto-escritorio-1.jpg"
-                        alt="Foto do escritório 1"> -->
+                    <div class="absolute -bottom-28 -left-28 rounded-full bg-radial from-color1 to-transparent to-50% p-32">
+                        <button class="flex items-center justify-center">
+                            <span class="material-icons text-white scale-125">
+                                play_arrow
+                            </span>
+                        </button>
+                    </div>
                 </aside>
             </div>
             <footer class="flex justify-center mt-8">
