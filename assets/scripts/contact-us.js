@@ -69,7 +69,8 @@ form.addEventListener('submit', (event) => {
         method: 'POST',
         headers: {
             'accept': 'application/json',
-            'content-type': 'application/json'
+            'content-type': 'application/json',
+            'access-control-allow-origin': '*'
         },
         body: JSON.stringify(data)
     };
@@ -77,7 +78,7 @@ form.addEventListener('submit', (event) => {
     const url = 'https://crm.rdstation.com/api/v1/contacts';
     const token = queryParams.find(param => param.key === 'token')?.value ?? 'xyz';
 
-    fetch(`${url}?token=${token}`, options)
+    fetch(`${url}?token=${token}`, { ...options, mode: 'cors' })
         .then(res => res.json())
         .then(res => console.log(res))
         .catch(err => console.error(err));
