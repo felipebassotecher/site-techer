@@ -18,7 +18,8 @@
   --font-weight-semibold: 400;
   --font-weight-bold: 600;
 
-  --index-navigation: 100;
+  --index-navigation: 99;
+  --index-global-loading: 100;
 
   --animate-zoom: zoom 1s ease-in-out forwards;
   --animate-mobile-menu: mobile-menu 0.5s ease-in-out forwards;
