@@ -1,4 +1,22 @@
-console.log('"Fale conosco" init!');
+import { LOCAL_STORAGE_KEYS, LocalStorageHelper } from './local-storage-helper.js';
+
+const queryParams = (() => {
+    const keyValueParams = location.search
+        .slice(1)
+        .split('&')
+        .map(param => {
+            const [key, value] = param.split('=');
+            return { key, value };
+        });
+
+    const map = new Map([['', '']]);
+    map.clear();
+    keyValueParams.forEach(({ key, value }) => {
+        map.set(key, value);
+    });
+
+    return map;
+})();
 
 const loading = {
     _element: document.getElementById('global-loading'),
@@ -29,94 +47,136 @@ const loading = {
     }
 };
 
-const queryParams = location.search
-    .slice(1)
-    .split('&')
-    .map(param => {
-        const [key, value] = param.split('=');
-        return { key, value };
-    });
+const contactContainerMode = {
+    _successContainer: document.getElementById('contact-success-container'),
+    _formContainer: document.getElementById('contact-form-container'),
+    showSuccess: () => {
+        contactContainerMode._formContainer.classList.add('hidden');
+        contactContainerMode._formContainer.remove();
+        contactContainerMode._successContainer.classList.remove('hidden');
+    },
+    showForm: () => {
+        contactContainerMode._successContainer.classList.add('hidden');
+        contactContainerMode._successContainer.remove();
+        contactContainerMode._formContainer.classList.remove('hidden');
+    }
+};
 
-setTimeout(() => {
-    loading.show();
-    
-    setTimeout(() => {
-        loading.hide();
-    }, 2500);
-}, 500);
+const errorMessage = {
+    _element: document.getElementById('form-error-message'),
+    show: (message) => {
+        const messageElement = errorMessage._element.querySelector('#form-error-message-text');
+        messageElement.textContent = message;
+        errorMessage._element.classList.remove('hidden');
+    },
+    hide: () => {
+        errorMessage._element.classList.add('hidden');
+    }
+};
+
+const redirectToForm = (success) => {
+    location.href = `fale-conosco/index.html?success=${success.toString()}#entre-em-contato`;
+};
+
+const isValidFormData = (data) => {
+    if (!data.aceitaPoliticaDePrivacidade) {
+        errorMessage.show('Você precisa aceitar a política de privacidade para continuar.');
+        return false;
+    }
+
+    return true;
+};
 
 const form = document.getElementById('contact-form');
 
-form.addEventListener('submit', (event) => {
-    event.preventDefault();
+if (queryParams.get('success') === 'true') {
+    const showSuccess = LocalStorageHelper.get(LOCAL_STORAGE_KEYS.FaleConosco.ShowSuccessMessage);
 
-    const formData = new FormData(form);
-    const data = {
-        contact: {
-            birthday: {
-                day: formData.get('birthday-day'),
-                month: formData.get('birthday-month'),
-                year: formData.get('birthday-year')
-            },
-            contact_custom_fields: [
-                // {
-                //     custom_field_id: '646e73a3651e44000f352486',
-                //     value: 'Valor X'
-                // }
-            ],
-            deal_ids: [
-                // '64dccdc7902ce80001d9fa9f',
-                // '64da562812a6310001baa2a4'
-            ],
-            emails: [
-                {
-                    email: formData.get('email')
-                }
-            ],
-            facebook: null,
-            legal_bases: [
-                {
-                    category: 'data_processing',
-                    status: 'granted',
-                    type: 'consent'
-                },
-                {
-                    category: 'communications',
-                    status: 'granted',
-                    type: 'vital_interest'
-                }
-            ],
-            linkedin: null,
-            name: formData.get('name'),
-            organization_id: null,
-            phones: [
-                {
-                    phone: formData.get('phone'),
-                    type: 'work'
-                }
-            ],
-            skype: null,
-            title: 'Software Engineer'
+    if (showSuccess) {
+        contactContainerMode.showSuccess();
+        LocalStorageHelper.set(LOCAL_STORAGE_KEYS.FaleConosco.ShowSuccessMessage, false);
+    } else {
+        redirectToForm(false);
+    }
+} else {
+    contactContainerMode.showForm();
+
+    const honeypotElement = document.querySelector('[data-contact-us-automatically]');
+    honeypotElement.style.display = 'none';
+    
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        errorMessage.hide();
+    
+        const formData = new FormData(form);
+        const payload = {
+            nome: formData.get('name'),
+            email: formData.get('email'),
+            telefone: formData.get('phone'),
+            mensagem: formData.get('message'),
+            spam: formData.get('contact-us-automatically'),
+            aceitaPoliticaDePrivacidade: formData.get('accept-terms')
+        };
+
+        if (!isValidFormData(payload)) {
+            return;
         }
-    };
 
-    console.log(data);
+        // const options = {
+        //     method: 'POST',
+        //     headers: {
+        //         'accept': 'application/json',
+        //         'content-type': 'application/json',
+        //         'access-control-allow-origin': '*'
+        //     },
+        //     body: JSON.stringify(payload)
+        // };
+    
+        // const url = 'https://techer.com.br/api/contato';
 
-    const options = {
-        method: 'POST',
-        headers: {
-            'accept': 'application/json',
-            'content-type': 'application/json',
-            'access-control-allow-origin': '*'
-        },
-        body: JSON.stringify(data)
-    };
+        // const request$ = fetch(url, { ...options, mode: 'cors' });
+        const request$ = new Promise((resolve) => {
+            setTimeout(() => {
+                resolve({
+                    success: true,
+                    message: 'Mensagem enviada com sucesso!'
+                });
+            }, 5000);
+        });
 
-    const url = 'https://crm.rdstation.com/api/v1/contacts';
-    const token = queryParams.find(param => param.key === 'token')?.value ?? 'xyz';
+        loading.show()
+            .then(() => request$)
+            // .then(res => res.json())
+            .then(res => {
+                if (res?.success) {
+                    return {
+                        success: true,
+                        message: 'Mensagem enviada com sucesso!'
+                    };
+                };
 
-    fetch(`${url}?token=${token}`, { ...options, mode: 'cors' })
-        .then(res => res.json())
-        .then(res => console.log(res))
-        .catch(err => console.error(err));
-});
+                return {
+                    success: false,
+                    message: res?.message ?? 'Erro ao enviar mensagem. Tente novamente mais tarde.'
+                };
+            })
+            .catch((err) => {
+                console.error(err);
+                return {
+                    success: false,
+                    message: 'Não foi possível salvar sua mensagem agora. Por favor, tente novamente mais tarde.'
+                };
+            })
+            .then(response => {
+                if (response.success) {
+                    loading.hide();
+                    redirectToForm(true);
+                    LocalStorageHelper.set(LOCAL_STORAGE_KEYS.FaleConosco.ShowSuccessMessage, true);
+                } else {
+                    loading.hide();
+                    errorMessage.show(response.message);
+                }
+            });
+    });
+}

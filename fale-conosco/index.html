@@ -193,30 +193,55 @@
         </div>
     </section>
 
-    <section class="bg-white block w-full py-24">
+    <section id="entre-em-contato" class="bg-white block w-full py-24">
         <div class="max-w-7xl mx-auto w-full p-6">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 md:gap-12">
-                <div class="flex flex-col gap-4">
+                <!-- Success -->
+                <div id="contact-success-container" class="flex flex-col gap-4">
+                    <h3 class="text-2xl md:text-3xl lg:text-4xl text-color1 font-semibold leading-10">
+                        Recebemos sua mensagem!
+                    </h3>
+                    <aside class="flex flex-col items-center gap-4 shadow-lg p-8 bg-white rounded">
+                        <span class="material-icons text-green-600 scale-150">
+                            check_circle
+                        </span>
+                        <p class="text-lg text-green-600 font-bold text-center">
+                            Mensagem enviada!
+                            <br/>
+                            Em breve retornaremos seu contato.
+                        </p>
+                        <p class="text-sm text-color-content-body text-center">
+                            Fique de olho na sua caixa de entrada (e no spam, só para garantir).
+                        </p>
+                        <a href="fale-conosco/index.html" class="mt-4 cursor-pointer text-center font-bold bg-color1 text-on-color1 text-base sm:text-lg p-2 px-4 sm:px-4 sm:py-2 rounded-full hover:bg-color1-dark w-full transition ease-in-out">
+                            Enviar outra mensagem
+                        </a>
+                    </aside>
+                </div>
+                <!-- Contact form -->
+                <div id="contact-form-container" class="flex flex-col gap-4">
                     <h3 class="text-2xl md:text-3xl lg:text-4xl text-color1 font-semibold leading-10">
                         Nos envie uma mensagem
                     </h3>
                     <form id="contact-form" class="flex flex-col gap-4 shadow-lg p-8 bg-white rounded">
                         <div class="flex flex-col gap-1">
                             <label for="name" class="text-sm font-bold text-color1">
-                                Nome
+                                Nome completo
                             </label>
                             <input
+                                required
                                 type="text"
                                 id="name"
                                 name="name"
                                 class="border border-gray-300 p-2 rounded focus:outline-color1"
-                                placeholder="Seu nome">
+                                placeholder="Seu nome completo">
                         </div>
                         <div class="flex flex-col gap-1">
                             <label for="phone" class="text-sm font-bold text-color1">
                                 Telefone
                             </label>
                             <input
+                                required
                                 type="tel"
                                 id="phone"
                                 name="phone"
@@ -228,6 +253,7 @@
                                 E-mail
                             </label>
                             <input
+                                required
                                 type="email"
                                 id="email"
                                 name="email"
@@ -239,13 +265,53 @@
                                 Mensagem
                             </label>
                             <textarea
+                                required
+                                minlength="6"
                                 id="message"
                                 name="message"
                                 class="border border-gray-300 p-2 rounded focus:outline-color1"
                                 rows="4"
                                 placeholder="Sua mensagem"></textarea>
                         </div>
-                        <button type="submit" class="text-center font-bold bg-color1 text-on-color1 text-base sm:text-lg p-2 px-4 sm:px-4 sm:py-2 rounded-full hover:bg-color1-dark w-full transition ease-in-out">
+                        <div class="flex items-center gap-2">
+                            <input
+                                required
+                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 focus:ring-2"
+                                type="checkbox"
+                                id="accept-terms"
+                                name="accept-terms">
+                            <label for="accept-terms" class="text-sm text-gray-600 select-none">
+                                Li e concordo com a
+                                <a href="docs/techer-politica-de-privacidade.pdf" target="_blank" class="underline hover:text-gray-400 transition ease-in-out">
+                                    Política de Privacidade
+                                </a>
+                            </label>
+                        </div>
+                        <div data-contact-us-automatically class="flex items-center gap-2">
+                            <input
+                                type="checkbox"
+                                name="contact-us-automatically"
+                                id="contact-us-automatically"
+                                value="1"
+                                tabindex="-1"
+                                autocomplete="off">
+                            <span class="text-sm text-gray-600 select-none">
+                                <a href="docs/techer-politica-de-privacidade.pdf" target="_blank" class="underline hover:text-gray-400 transition ease-in-out">
+                                    Acordo de Política de Privacidade para contato automatizado
+                                </a>
+                            </span>
+                        </div>
+                        <div class="hidden" id="form-error-message">
+                            <div class="flex items-center gap-2 my-2">
+                                <span class="material-icons text-red-600">
+                                    error
+                                </span>
+                                <span class="text-sm text-red-600 font-bold" id="form-error-message-text">
+                                    Erro ao enviar mensagem. Tente novamente mais tarde.
+                                </span>
+                            </div>
+                        </div>
+                        <button type="submit" class="cursor-pointer disabled:cursor-not-allowed text-center font-bold bg-color1 text-on-color1 text-base sm:text-lg p-2 px-4 sm:px-4 sm:py-2 rounded-full hover:bg-color1-dark w-full transition ease-in-out">
                             Enviar mensagem
                         </button>
                     </form>
@@ -414,7 +480,7 @@
         </div>
     </footer>
 
-    <script src="./assets/scripts/contact-us.js"></script>
+    <script type="module" src="./assets/scripts/contact-us.js"></script>
     <script type="module" src="./assets/scripts/animation.js"></script>
     <script type="module" src="./assets/scripts/mobile-menu.js"></script>
     <script src="./assets/scripts/smooth-scroll-anchors.js"></script>
