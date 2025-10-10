@@ -1,5 +1,34 @@
 console.log('"Fale conosco" init!');
 
+const loading = {
+    _element: document.getElementById('global-loading'),
+    _duration: 500,
+    show: () => {
+        loading._element.style.opacity = '0';
+        loading._element.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        const delay = 100;
+        setTimeout(() => {
+            loading._element.style.opacity = '0.8';
+        }, delay);
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                resolve();
+            }, loading._duration + delay);
+        });
+    },
+    hide: () => {
+        loading._element.style.opacity = '0';
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                document.body.style.overflow = 'auto';
+                loading._element.classList.add('hidden');
+                resolve();
+            }, loading._duration);
+        });
+    }
+};
+
 const queryParams = location.search
     .slice(1)
     .split('&')
@@ -7,6 +36,14 @@ const queryParams = location.search
         const [key, value] = param.split('=');
         return { key, value };
     });
+
+setTimeout(() => {
+    loading.show();
+    
+    setTimeout(() => {
+        loading.hide();
+    }, 2500);
+}, 500);
 
 const form = document.getElementById('contact-form');
 

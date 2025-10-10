@@ -30,6 +30,20 @@
     <link href="./assets/styles/tailwindcss-result.css" rel="stylesheet">
 </head>
 <body class="bg-background-dark relative text-sm sm:text-base">
+    <div id="global-loading" class="hidden fixed inset-0 w-screen h-screen z-(--index-global-loading) transition-opacity ease-in-out duration-500">
+        <div class="w-screen h-screen bg-white opacity-75">
+            &nbsp;
+        </div>
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center gap-2">
+            <img
+                class="w-32 sm:w-40 animate-pulse"
+                src="assets/images/techer-transparent-background.png"
+                alt="Logo Techer">
+            <div class="text-xl sm:text-2xl font-bold drop-shadow-white drop-shadow-md">
+                Carregando...
+            </div>
+        </div>
+    </div>
     <nav class="bg-background-dark block w-full sticky top-0 z-(--index-navigation)">
         <div class="max-w-7xl mx-auto w-full flex items-center justify-between sm:justify-start gap-4 p-2 px-4 sm:p-6">
             <button data-toggle="mobile-menu" class="flex sm:hidden w-6 h-6">
