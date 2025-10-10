@@ -236,36 +236,38 @@
                         </button>
                     </form>
                 </div>
-                <div class="flex flex-col gap-4">
+                <div class="relative flex flex-col gap-4">
                     <h3 class="text-2xl md:text-3xl lg:text-4xl text-color1 font-semibold leading-10">
                         Venha nos visitar
                     </h3>
-                    <aside class="flex items-center gap-4 p-4 border-l-4 border-color1">
+                    <aside class="static lg:sticky top-[calc(0rem+60px)] sm:top-[calc(0rem+96px)] flex items-center gap-4 p-4 border-l-[6px] border-color1 bg-white rounded-md rounded-l-none shadow">
                         <span class="material-icons text-color1 scale-125">coffee</span>
                         <p>
                             O café é por nossa conta!
                             <span class="text-nowrap">Venha visitar nosso escritório</span>.
                         </p>
                     </aside>
-                    <div class="w-full h-full overflow-hidden">
-                        <iframe
-                            class="hidden md:block"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.4328879735544!2d-49.28923578162403!3d-25.457216862655144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce3fb765d7a4d%3A0x1f7a7e9ab53150b2!2sTecher!5e0!3m2!1sen!2sbr!4v1756749661995!5m2!1sen!2sbr"
-                            width="600"
-                            height="450"
-                            style="border:0;"
-                            allowfullscreen=""
-                            loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        <iframe
-                            class="block md:hidden"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.4328879735544!2d-49.28923578162403!3d-25.457216862655144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce3fb765d7a4d%3A0x1f7a7e9ab53150b2!2sTecher!5e0!3m2!1sen!2sbr!4v1756749661995!5m2!1sen!2sbr"
-                            width="400"
-                            height="300"
-                            style="border:0;"
-                            allowfullscreen=""
-                            loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="w-full h-full p-2 overflow-hidden">
+                        <div class="w-full h-full overflow-hidden">
+                            <iframe
+                                class="hidden md:block"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.4328879735544!2d-49.28923578162403!3d-25.457216862655144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce3fb765d7a4d%3A0x1f7a7e9ab53150b2!2sTecher!5e0!3m2!1sen!2sbr!4v1756749661995!5m2!1sen!2sbr"
+                                width="600"
+                                height="450"
+                                style="border:0;"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe
+                                class="block md:hidden"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.4328879735544!2d-49.28923578162403!3d-25.457216862655144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce3fb765d7a4d%3A0x1f7a7e9ab53150b2!2sTecher!5e0!3m2!1sen!2sbr!4v1756749661995!5m2!1sen!2sbr"
+                                width="400"
+                                height="300"
+                                style="border:0;"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -276,8 +278,8 @@
         <div class="max-w-7xl mx-auto w-full p-6">
             <div class="flex flex-col lg:flex-row items-center sm:items-start gap-8 lg:gap-12">
                 <a class="w-40 lg:w-60 hidden sm:block" href=".">
-                    <img src="assets/images/techer-logo.png" alt="Logo Techer">
-                </a>
+                        <img src="assets/images/techer-logo.png" alt="Logo Techer">
+                    </a>
                 <nav class="flex-auto w-full lg:w-fit">
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-4">
                         <!-- Techer Links -->
