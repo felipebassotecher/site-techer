@@ -139,8 +139,8 @@ if (queryParams.get('success') === 'true') {
         const request$ = new Promise((resolve) => {
             setTimeout(() => {
                 resolve({
-                    success: true,
-                    message: 'Mensagem enviada com sucesso!'
+                    success: false,
+                    message: 'Envio de mensagens temporariamente indisponível :( Tente novamente mais tarde, ou envie um email para contato@techer.com.br'
                 });
             }, 5000);
         });
