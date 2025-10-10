@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# Permitir acesso a todas as páginas principais
+Allow: /index.html
+Allow: /nsight/
+Allow: /fale-conosco/
+
+# Permitir acesso aos recursos estáticos
+Allow: /assets/
+Allow: /docs/
+
+# Permitir acesso aos favicons
+Allow: /favicon-*.png
+
+# Permitir acesso ao sitemap
+Allow: /sitemap.xml
+
+# Referência ao sitemap
+Sitemap: https://www.techer.com.br/sitemap.xml
