@@ -123,27 +123,27 @@ if (queryParams.get('success') === 'true') {
             return;
         }
 
-        // const options = {
-        //     method: 'POST',
-        //     headers: {
-        //         'accept': 'application/json',
-        //         'content-type': 'application/json',
-        //         'access-control-allow-origin': '*'
-        //     },
-        //     body: JSON.stringify(payload)
-        // };
+        const options = {
+            method: 'POST',
+            headers: {
+                'accept': 'application/json',
+                'content-type': 'application/json',
+                'access-control-allow-origin': '*'
+            },
+            body: JSON.stringify(payload)
+        };
     
-        // const url = 'https://techer.com.br/api/contato';
+        const url = 'https://reazhpzroa.execute-api.sa-east-1.amazonaws.com/default/contato';
 
-        // const request$ = fetch(url, { ...options, mode: 'cors' });
-        const request$ = new Promise((resolve) => {
-            setTimeout(() => {
-                resolve({
-                    success: false,
-                    message: 'Envio de mensagens temporariamente indisponível :( Tente novamente mais tarde, ou envie um email para contato@techer.com.br'
-                });
-            }, 5000);
-        });
+        const request$ = fetch(url, { ...options });
+        // const request$ = new Promise((resolve) => {
+        //     setTimeout(() => {
+        //         resolve({
+        //             success: false,
+        //             message: 'Envio de mensagens temporariamente indisponível :( Tente novamente mais tarde, ou envie um email para contato@techer.com.br'
+        //         });
+        //     }, 5000);
+        // });
 
         loading.show()
             .then(() => request$)
