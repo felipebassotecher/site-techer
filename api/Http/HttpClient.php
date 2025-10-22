@@ -14,30 +14,30 @@ abstract class HttpClient {
     }
 
     private static function sendRequest($url, $method, $body = null, $headers = []) {
-        $ch = curl_init();
+        $curl = curl_init();
 
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($curl, CURLOPT_URL, $url);
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
         if ($method === 'POST') {
-            curl_setopt($ch, CURLOPT_POST, true);
-            curl_setopt($ch, CURLOPT_POSTFIELDS, $body);
+            curl_setopt($curl, CURLOPT_POST, true);
+            curl_setopt($curl, CURLOPT_POSTFIELDS, $body);
         }
 
-        $requestHeaders = array_merge($headers, [
+        $requestHeaders = array_merge($headers, array(
             'Content-Type: application/json',
             'Accept: application/json'
-        ]);
+        ));
 
-        curl_setopt($ch, CURLOPT_HTTPHEADER, $requestHeaders);
+        curl_setopt($curl, CURLOPT_HTTPHEADER, $requestHeaders);
 
-        $response = curl_exec($ch);
+        $response = curl_exec($curl);
 
-        if (curl_errno($ch)) {
-            throw new Exception('Error sending HTTP request: ' . curl_error($ch));
+        if (curl_errno($curl)) {
+            throw new Exception('Error sending HTTP request: ' . curl_error($curl));
         }
 
-        curl_close($ch);
+        curl_close($curl);
 
         return json_decode($response, true);
     }

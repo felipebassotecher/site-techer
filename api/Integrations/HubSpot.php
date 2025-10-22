@@ -24,19 +24,24 @@ class HubSpot {
         ];
 
         $body = [
-            'associations' => array([
-                'types' => [
-                    [
-                        'associationCategory' => '',
-                        'associationTypeId' => 0
+            'inputs' => [
+                'associations' => array([
+                    'types' => [
+                        [
+                            'associationCategory' => 'HUBSPOT_DEFINED',
+                            'associationTypeId' => 1
+                        ]
+                    ],
+                    'to' => [
+                        'id' => '50428608'
                     ]
-                ],
-                'to' => [
-                    'id' => 'string'
-                ]
-            ]),
-            'properties' => $data
+                ]),
+                'properties' => $data
+            ]
         ];
+
+        error_log(json_encode($this->config));
+        error_log(json_encode($body));
 
         $response = HttpClient::post($url, $body, $headers);
 
