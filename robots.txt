@@ -3,8 +3,8 @@ Allow: /
 
 # Permitir acesso a todas as páginas principais
 Allow: /index.html
-Allow: /nsight/
-Allow: /fale-conosco/
+Allow: /nsight/index.html
+Allow: /fale-conosco/index.html
 
 # Permitir acesso aos recursos estáticos
 Allow: /assets/
